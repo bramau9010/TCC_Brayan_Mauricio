@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preditor de sobrevivencia </title>
+</head>
+<body>
+    <h1>Survival Model Predictor</h1>
+    <form method="POST" action="/">
+        <label>Film & Animation:</label>
+        <input type="number" name="Film_Animation" step="1"><br>
+
+        <label>Music:</label>
+        <input type="number" name="Music" step="1"><br>
+
+        <label>Sports:</label>
+        <input type="number" name="Sports" step="1"><br>
+
+        <label>Subscribers:</label>
+        <input type="number" name="Subscriptores" step="0.01"><br>
+
+        <label>Comment Count Duration:</label>
+        <input type="number" name="comment_count_dur" step="0.01"><br>
+
+        <label>View Count Duration:</label>
+        <input type="number" name="view_count_dur" step="0.01"><br>
+
+        <label>Trending Duration:</label>
+        <input type="number" name="trending_dur" step="0.01"><br>
+
+        <label>Status:</label>
+        <input type="number" name="Status" step="1"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
